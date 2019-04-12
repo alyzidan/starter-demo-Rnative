@@ -9,7 +9,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, View} from 'react-native';
 
-import { Container, Header, Content, Footer, FooterTab, Button, Text } from 'native-base';
+import {Drawer, Container, Header, Content, Footer, FooterTab, Button, Text } from 'native-base';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -28,17 +28,21 @@ export default class App extends Component<Props> {
       //   <Text style={styles.instructions}>{instructions}</Text>
       // </View>
       <Container>
-      <Header />
+      <Header>
+        <Text>
+          sadajkdhas
+        </Text>
+      </Header>
       <Content />
       <Footer>
         <FooterTab>
-          <Button>
+          <Button active style={styles.container.noBrd}>
             <Text>Apps</Text>
           </Button>
           <Button>
             <Text>Camera</Text>
           </Button>
-          <Button active>
+          <Button >
             <Text>Navigate</Text>
           </Button>
           <Button>
@@ -57,6 +61,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+  },
+  noBrd: {
+    borderRadius:0,
   },
   welcome: {
     fontSize: 20,
